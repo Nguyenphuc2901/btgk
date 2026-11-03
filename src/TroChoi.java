@@ -9,6 +9,13 @@ class TroChoi
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
+    public void reset()
+    {
+        player1=new Player("Nguoi choi 1");
+        player2=new Player("Nguoi choi 2");
+        player=player1;
+        ketThuc=false;
+    }
     public TroChoi()
     {
         player1=new Player("Nguoi choi 1");
@@ -18,6 +25,7 @@ class TroChoi
     }
     public void batDau()
     {
+        reset();
         System.out.println("=== DAT TAU NGUOI CHOI 1 ===");
         player1.datTau();
         xoaManHinh();
